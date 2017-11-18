@@ -3,7 +3,7 @@
 namespace UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use 
+use http\Env\Response;
 
 class UserController extends Controller
 {
