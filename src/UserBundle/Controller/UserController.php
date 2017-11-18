@@ -5,6 +5,7 @@ namespace UserBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
+
 class UserController extends Controller
 {
     public function indexAction()
@@ -13,21 +14,17 @@ class UserController extends Controller
         
         $users = $em->getRepository('UserBundle:User')->findAll();
         
-        $res = 'Lista de usuarios <br/>';
-        
-        foreach($users as $user)
-        {
-            $res .= 'Usuario: ' . $user->getUsername();
-            
-            return new Response($res);
-        }
+        return $this->render('UserBundle:User:index.html.twig', array('users' => $users));
         
     }
     
     public function viewAction($id)
     {
-        $em = $this->getDoctrine()->getManager();
+        $repository = $this->getDoctrine()->getRepository('UserBundle:User');
         
-        $users = $em->getRepository('UserBundle:User')->();
+        
+        $user = $repository->find($id);
+        
+        return new Response('Ususario: '. $user->getUsername());
     }
 }
