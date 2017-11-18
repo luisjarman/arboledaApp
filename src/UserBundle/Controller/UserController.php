@@ -23,4 +23,11 @@ class UserController extends Controller
         }
         
     }
+    
+    public function viewAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        
+        $users = $em->getRepository('UserBundle:User')->();
+    }
 }
