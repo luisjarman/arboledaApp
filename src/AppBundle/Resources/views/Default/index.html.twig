@@ -66,6 +66,15 @@
         </section>
         <section class="bg-alt" id="ultsNoticias">
             <div class="container">
+                {% for item in frontPageItems %}
+                <div class="row">
+                    <h1 class="display-3">{{ item.getTitle }}</h1>
+                    {% if item.getSubTitle %}
+                    <h1 class="display-5">{{ item.getSubtitle }}</h1>
+                    {% endif %}
+                    {{ item.getContent }}
+                </div>
+                {% endfor %}
                 <div class="row">
                     <div class="well">
                         <h1 class="display-3">Octubre 2016</h1>
