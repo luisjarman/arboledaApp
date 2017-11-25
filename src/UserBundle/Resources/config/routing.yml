@@ -1,6 +1,6 @@
 login_form:
-  path:     /user/login
-      defaults: { _controller: UserBundle:Security:login}
+    path:     /user/login
+    defaults: { _controller: UserBundle:Security:login}
 user_index:
     path:     /user/index
     defaults: { _controller: UserBundle:User:index}
