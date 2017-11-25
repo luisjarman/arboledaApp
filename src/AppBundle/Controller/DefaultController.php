@@ -13,7 +13,8 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('AppBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $frontPageItems = $em->getRepository('AppBundle:FrontPageItem')->findAll();
+        return $this->render('AppBundle:Default:index.html.twig', array('$frontPageItems' => $frontPageItems));
     }
 }
