@@ -1,3 +1,3 @@
 default_index:
-    path:     /index
+    path:     /default/index
     defaults: { _controller: AppBundle:Default:index}
