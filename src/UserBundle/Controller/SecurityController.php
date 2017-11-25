@@ -18,7 +18,7 @@ class SecurityController extends Controller
         $authUtils = $this->get('security.authentication_utils');
         $error = $authUtils->getLastAuthenticationError();
         $lastUsername = $authUtils->getLastUsername();
-        return $this->render('security/login.html.twig', array(
+        return $this->render('UserBundle:Security:login.html.twig', array(
             'last_username' => $lastUsername,
             'error'         => $error,
         ));
