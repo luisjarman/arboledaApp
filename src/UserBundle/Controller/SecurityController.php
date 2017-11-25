@@ -13,8 +13,9 @@ class SecurityController extends Controller
     /**
      * @Route("/login", name="login")
      */
-    public function loginAction(Request $request, AuthenticationUtils $authUtils)
+    public function loginAction(Request $request)
     {
+        $authUtils = $this->get('security.authentication_utils');
         $error = $authUtils->getLastAuthenticationError();
         $lastUsername = $authUtils->getLastUsername();
         return $this->render('security/login.html.twig', array(
