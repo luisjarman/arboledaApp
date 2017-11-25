@@ -1,24 +1,3 @@
 default_index:
     path:     /index
-    defaults: { _controller: UserBundle:Security:login}
-login_form:
-    path:     /user/login
-    defaults: { _controller: UserBundle:Security:login}
-user_index:
-    path:     /user/index
-    defaults: { _controller: UserBundle:User:index}
-user_add:
-    path: /user/add
-    defaults: { _controller : UserBundle:User:add }
-    
-user_edit:
-    path: /user/edit/{id}
-    defaults: { _controller : UserBundle:User:edit }
-    
-user_view:
-    path: /user/view/{id}
-    defaults: { _controller : UserBundle:User:view }
-    
-user_delete:
-    path: /user/delete/{id}
-    defaults: { _controller : UserBundle:User:delete }
+    defaults: { _controller: AppBundle:Default:index}
