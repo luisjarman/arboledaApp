@@ -44,11 +44,11 @@ a:hover, a:focus {
     color: rgba(41,43,44, 0.8) !important;
 }
 .hero-header:after {
-    background: rgba(98,0,234, 0.64);
-    background: -moz-linear-gradient(135deg, rgba(98,0,234, 0.50) 0%, rgba(98,0,234, 0.40) 100%);
-    background: -o-linear-gradient(135deg, rgba(98,0,234, 0.50) 0%, rgba(98,0,234, 0.40) 100%);
-    background: -webkit-linear-gradient(135deg, rgba(98,0,234, 0.50) 0%, rgba(98,0,234, 0.40) 100%);
-    background: linear-gradient(135deg, rgba(98,0,234, 0.50) 0%, rgba(98,0,234, 0.40) 100%);
+    /*background: rgba(98,0,234, 0.64);*/
+    /*background: -moz-linear-gradient(135deg, rgba(98,0,234, 0.50) 0%, rgba(98,0,234, 0.40) 100%);*/
+    /*background: -o-linear-gradient(135deg, rgba(98,0,234, 0.50) 0%, rgba(98,0,234, 0.40) 100%);*/
+    /*background: -webkit-linear-gradient(135deg, rgba(98,0,234, 0.50) 0%, rgba(98,0,234, 0.40) 100%);*/
+    /*background: linear-gradient(135deg, rgba(98,0,234, 0.50) 0%, rgba(98,0,234, 0.40) 100%);*/
 }
 .hero-header:after {
     position: absolute;
@@ -85,7 +85,7 @@ a:hover, a:focus {
     background-color: #fff;
 }
 .bg-primary, .badge-primary{
-    background-color: #6200ea !important;
+    background-color: #0053ea !important;
 }
 .bg-success, .badge-success{
     background-color: #00c853 !important;
