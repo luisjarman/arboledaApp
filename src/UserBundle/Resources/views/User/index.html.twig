@@ -1,26 +1,18 @@
+{% extends "base.html" %}
+{% block head %}
 
-<html>
-    <head>
-        <link rel="stylesheet" href="{{ asset('public/css/bootstrap.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('public/css/bootstrap-reboot.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('public/css/bootstrap-grid.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('public/css/style.css') }}" />
-        <link rel="stylesheet" href="{{ asset('public/css/jquery-te-1.4.0.css') }}" />
-        <script type="text/javascript" src="{{ asset('public/js/jquery-3.2.1.js') }}"></script>
-       <script type="text/javascript" src="{{ asset('public/js/bootstrap.bundle.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('public/js/bootstrap.min.js') }}"></script>
-         <script type="text/javascript" src="{{ asset('public/js/jquery-te-1.4.0.min.js') }}"></script>
-        <script type = “text/javascript”>
+        <script >
           $(document).ready(function(){
-            $(“#hey″).click(function(){
-                alert(“Has escrito: ”);
+            $('#hey').click(function(){
+                alert('Has escrito: ');
             });
         })
         
     </script>
-    </head>
-    <body>
-        <div class="container">
+{% endblock %}
+   {% block body %}
+
+<div class="container">
             <div class="well">
             <h1>Hello World!</h1>    
     <div  class="alert alert-primary" role="alert">
@@ -63,8 +55,9 @@
         <script>
            $("#textarea").jqte();
         </script>
-       
-    </body>
-  
+
+{% endblock %}
+
+
 </html>
 
