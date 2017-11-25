@@ -72,7 +72,7 @@
                     {% if item.getSubTitle %}
                     <h1 class="display-5">{{ item.getSubtitle }}</h1>
                     {% endif %}
-                    {{ item.getContent }}
+                    {{ item.getContent|raw }}
                 </div>
                 {% endfor %}
                 <div class="row">
