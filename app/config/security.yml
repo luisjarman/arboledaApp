@@ -2,10 +2,16 @@
 # http://symfony.com/doc/current/book/security.html
 security:
 
-    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    #comentar ?
+    encoders:
+        Symfony\Component\Security\Core\User\UserInterface: plaintext
+
+    # comentar users
     providers:
         in_memory:
-            memory: ~
+            memory:
+                users:
+                    user:  { password: userpass }
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -20,6 +26,18 @@ security:
             # http_basic: ~
             # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
 
-            form_login:
-                login_path: login
-                check_path: login
+        login:
+                    pattern:  ^/login$
+                    stateless: true
+                    knpu_guard:
+                        authenticators:
+                            - username_password_guard_authenticator
+
+                api:
+                    pattern: ^/api
+                    stateless: true
+                    knpu_guard:
+                        authenticators:
+                            - jwt_guard_authenticator
+
+
