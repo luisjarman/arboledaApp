@@ -17,4 +17,12 @@ class DefaultController extends Controller
         $frontPageItems = $em->getRepository('AppBundle:FrontPageItem')->findAll();
         return $this->render('AppBundle:Default:index.html.twig', array('frontPageItems' => $frontPageItems));
     }
+
+    /**
+     * @Route("/admin")
+     */
+    public function admin()
+    {
+        return new Response('<html><body>Admin page!</body></html>');
+    }
 }
