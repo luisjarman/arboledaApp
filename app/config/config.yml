@@ -66,18 +66,3 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
-
-services:
-    username_password_guard_authenticator:
-        class: AppBundle\Security\UsernamePasswordGuardAuthenticator
-        arguments: [@security.password_encoder]
-        public: false
-
-    jwt_guard_authenticator:
-        class: AppBundle\Security\JWTGuardAuthenticator
-        arguments: [@jwt_coder]
-        public: false
-
-    jwt_coder:
-        class: AppBundle\Service\JWTCoder
-        arguments: [%secret%]

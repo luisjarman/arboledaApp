@@ -8,7 +8,3 @@ generalApp:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
-
-login:
-    path: /login
-    defaults: { _controller: AppBundle:User:login }
