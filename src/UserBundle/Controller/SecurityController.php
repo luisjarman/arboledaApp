@@ -15,12 +15,12 @@ class SecurityController extends Controller
      */
     public function loginAction(Request $request)
     {
-        $authUtils = $this->get('security.authentication_utils');
-        $error = $authUtils->getLastAuthenticationError();
-        $lastUsername = $authUtils->getLastUsername();
+//        $authUtils = $this->get('security.authentication_utils');
+//        $error = $authUtils->getLastAuthenticationError();
+//        $lastUsername = $authUtils->getLastUsername();
         return $this->render('UserBundle:Security:login.html.twig', array(
-            'last_username' => $lastUsername,
-            'error'         => $error,
+            'last_username' => '',
+            'error'         => '',
         ));
     }
 }
